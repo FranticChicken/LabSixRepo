@@ -17,10 +17,16 @@ public class Player : MonoBehaviour
 
     public void Shoot()
     {
-        print("I shot: " + InputManager.GetCameraRay());
-        weaponShootToggle = !weaponShootToggle;
-        if(weaponShootToggle) myWeapon.StartShooting();
-        else myWeapon.StopShooting();
+        float ammoAmount = myWeapon.returnMaxAmmo();
+        print(ammoAmount);
+        if (ammoAmount > 0) 
+        {
+            
+            //print("I shot: " + InputManager.GetCameraRay());
+            weaponShootToggle = !weaponShootToggle;
+            if (weaponShootToggle) myWeapon.StartShooting();
+            else myWeapon.StopShooting();
 
+        }
     }
 }

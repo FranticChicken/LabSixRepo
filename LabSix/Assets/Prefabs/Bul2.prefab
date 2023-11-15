@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 578780664522197042}
   - component: {fileID: 8930347340638060519}
   - component: {fileID: 1638112117188329719}
+  - component: {fileID: -7766708751962914224}
   m_Layer: 0
   m_Name: Bul2
   m_TagString: Untagged
@@ -130,6 +131,21 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!114 &-7766708751962914224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3643325119433121593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0decc78586541504faa22e1acf202e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  shootForce: 50
+  rb: {fileID: 1638112117188329719}

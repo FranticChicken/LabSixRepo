@@ -19,6 +19,18 @@ public abstract class WeaponBase : MonoBehaviour
     private WaitUntil _coolDownEnforce;
     private float _currentChargeTime;
 
+    //ammo stuff
+    [Header("Ammo Stuff")]
+    private float maxAmmo = 20; 
+    [SerializeField] bool ammoEmpty; 
+
+
+    public float returnMaxAmmo()
+    {
+        return maxAmmo;
+    }
+
+   
 
     private void Start()
     {
@@ -29,6 +41,7 @@ public abstract class WeaponBase : MonoBehaviour
     public void StartShooting()
     {
         _currentFireTimer = StartCoroutine(RefireTimer());
+        maxAmmo -= 1; 
     }
 
     public void StopShooting()
